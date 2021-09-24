@@ -14,7 +14,7 @@
 #define PACKET_STD_SIZE 12
 #define data_package_size 26
 #define data_mask_size 6
-
+#define eop 0b000000000000000000000000000000
 int tari_test = 0b111110100;
 ack command_ack;
 
@@ -56,6 +56,7 @@ void mount_package(int command, int size)
             remain_bits_to_send = remain_bits_to_send - last_package_size;
         }
     }
+    send_package(eop);
 }
 
 int main()
