@@ -1,0 +1,9 @@
+21:55:39 **** Incremental Build of configuration Nios II for project rfid_test ****
+make all 
+Info: Building ../rfid_test_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../rfid_test_bsp/
+[BSP build complete]
+[RUN_ON_HDL_SIMULATOR_ONLY_rfid_test build complete]
+
+21:55:40 Build Finished (took 1s.334ms)
+
