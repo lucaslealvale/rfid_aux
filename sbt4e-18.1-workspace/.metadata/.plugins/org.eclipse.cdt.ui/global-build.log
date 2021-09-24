@@ -1,0 +1,21 @@
+21:55:29 **** Incremental Build of configuration Nios II for project rfid_test ****
+make all 
+Info: Building ../rfid_test_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../rfid_test_bsp/
+[BSP build complete]
+Info: Compiling hello_world.c to obj/default/hello_world.o
+nios2-elf-gcc -xc -MP -MMD -c -I../rfid_test_bsp//HAL/inc -I../rfid_test_bsp/ -I../rfid_test_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DALT_SIM_OPTIMIZE -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world.o hello_world.c
+Info: Linking RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.elf
+nios2-elf-g++  -T'../rfid_test_bsp//linker.x' -msys-crt0='../rfid_test_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../rfid_test_bsp/  -msmallc  -Wl,-Map=RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.map   -O0 -g -Wall   -mno-hw-div -mhw-mul -mno-hw-mulx -mgpopt=global  -o RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.elf obj/default/hello_world.o obj/default/helpers/commands/ack.o obj/default/helpers/commands/kill.o obj/default/helpers/commands/lock.o obj/default/helpers/commands/nak.o obj/default/helpers/commands/query.o obj/default/helpers/commands/query_adjust.o obj/default/helpers/commands/query_rep.o obj/default/helpers/commands/read.o obj/default/helpers/commands/req_rn.o obj/default/helpers/commands/rn16.o obj/default/helpers/commands/select.o obj/default/helpers/commands/write.o obj/default/helpers/crc.o -lm -msys-lib=m
+nios2-elf-insert RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 255 --sidp 0x41020 --timestamp 1632331855 --stderr_dev none --stdin_dev none --stdout_dev none --sopc_system_name RFID_NIOS --quartus_project_dir "C:/Users/Lucas/Documents/PFE/21b-indago-rfid-conformance-tester/21b-indago-rfid-conformance-tester/fpga" --jdi ../..//output_files/rfid-conformance-tester.jdi --sopcinfo C:/Users/Lucas/Documents/PFE/21b-indago-rfid-conformance-tester/21b-indago-rfid-conformance-tester/fpga/software/rfid_test_bsp/../../RFID_NIOS.sopcinfo
+Info: (RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.elf) 10 KBytes program size (code + initialized data).
+Info:                                           101 KBytes free for stack + heap.
+Info: Creating RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.elf >RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.objdump
+[RUN_ON_HDL_SIMULATOR_ONLY_rfid_test build complete]
+21:55:39 **** Incremental Build of configuration Nios II for project rfid_test ****
+make all 
+Info: Building ../rfid_test_bsp/
+C:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../rfid_test_bsp/
+[BSP build complete]
+[RUN_ON_HDL_SIMULATOR_ONLY_rfid_test build complete]

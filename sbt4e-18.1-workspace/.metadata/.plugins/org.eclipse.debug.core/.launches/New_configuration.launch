@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.altera.sbtgui.launch.modelsim.Nios2ModelsimLaunchConfiguration">
+<stringAttribute key="elfFile" value="C:\Users\Lucas\Documents\PFE\21b-indago-rfid-conformance-tester\21b-indago-rfid-conformance-tester\fpga\software\rfid_test\RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.elf"/>
+<stringAttribute key="modelSimPath" value="C:\intelFPGA_lite\18.1\modelsim_ase\win32aloem"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="RUN_ON_HDL_SIMULATOR_ONLY_rfid_test.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="rfid_test"/>
+<stringAttribute key="spdPath" value="C:\Users\Lucas\Documents\PFE\21b-indago-rfid-conformance-tester\21b-indago-rfid-conformance-tester\fpga\RFID_NIOS_tb.spd"/>
+</launchConfiguration>
