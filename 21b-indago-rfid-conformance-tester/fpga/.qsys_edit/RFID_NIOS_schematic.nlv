@@ -1,0 +1,21 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst RFID_NIOS.nios_rfid_peripheral_0 -pg 1 -lvl 3 -y 290
+preplace inst RFID_NIOS.nios2_gen2_0.cpu -pg 1
+preplace inst RFID_NIOS.nios2_gen2_0 -pg 1 -lvl 2 -y 120
+preplace inst RFID_NIOS.jtag_uart_0 -pg 1 -lvl 3 -y 110
+preplace inst RFID_NIOS.sysid_qsys_0 -pg 1 -lvl 3 -y 210
+preplace inst RFID_NIOS.onchip_memory2_0 -pg 1 -lvl 3 -y 30
+preplace inst RFID_NIOS.nios2_gen2_0.reset_bridge -pg 1
+preplace inst RFID_NIOS -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst RFID_NIOS.nios2_gen2_0.clock_bridge -pg 1
+preplace inst RFID_NIOS.clk_0 -pg 1 -lvl 1 -y 50
+preplace netloc EXPORT<net_container>RFID_NIOS</net_container>(SLAVE)RFID_NIOS.rfid_tx,(SLAVE)nios_rfid_peripheral_0.tx) 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc FAN_OUT<net_container>RFID_NIOS</net_container>(SLAVE)nios2_gen2_0.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)sysid_qsys_0.clk,(SLAVE)nios_rfid_peripheral_0.clock,(SLAVE)onchip_memory2_0.clk1,(MASTER)clk_0.clk) 1 1 2 270 40 730
+preplace netloc EXPORT<net_container>RFID_NIOS</net_container>(SLAVE)RFID_NIOS.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>RFID_NIOS</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart_0.irq) 1 2 1 710
+preplace netloc INTERCONNECT<net_container>RFID_NIOS</net_container>(MASTER)nios2_gen2_0.data_master,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)sysid_qsys_0.control_slave,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)nios_rfid_peripheral_0.avalon_slave_0_1,(SLAVE)onchip_memory2_0.s1) 1 1 2 310 80 670
+preplace netloc EXPORT<net_container>RFID_NIOS</net_container>(SLAVE)RFID_NIOS.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>RFID_NIOS</net_container>(SLAVE)onchip_memory2_0.reset1,(SLAVE)jtag_uart_0.reset,(SLAVE)sysid_qsys_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)nios_rfid_peripheral_0.reset_sink) 1 1 2 290 60 690
+levelinfo -pg 1 0 60 940
+levelinfo -hier RFID_NIOS 70 100 430 780 930
