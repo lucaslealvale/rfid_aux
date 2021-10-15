@@ -23,8 +23,7 @@ void start_communication ()
     query command_query;
     query_init(&command_query, dr,m,trext ,sel ,session, target,q);
     query_build(&command_query);
-    select_package(command_query, command_query.size);
-    // send this command
+    send_package(command_query, command_query.size);
 
     // WAIT FOR Tag responds with RN16 
 
@@ -32,8 +31,7 @@ void start_communication ()
     ack command_ack;
     ack_init(&command_ack, rn);
     ack_build(&command_ack);
-    select_package(command_ack, command_ack.size);
-    // send this command
+    send_package(command_ack, command_ack.size);
 
     // WAIT FOR: Valid RN16: Tag responds with {PC/XPC, EPC}
     //           Invalid RN16: No reply
@@ -41,8 +39,7 @@ void start_communication ()
     req_rn command_req_rn;
     req_rn_init(&command_req_rn,rn);
     req_rn_build(&command_req_rn);
-    select_package(command_req_rn, command_req_rn.size);
-    // send this command
+    send_package(command_req_rn, command_req_rn.size);
 
     // receiver wait for: Valid RN16: Tag responds with {handle}
     //                    Invalid RN16: No reply
@@ -53,7 +50,8 @@ void start_communication ()
     commands[2] = 0b1111111111111111;                 //16
     commands[3] = 0b010101010101010101010101010101;   //30
     int commands_size = sizeof(commands) / sizeof(int);
-    select_package(commands, commands_size);
+    send_package(commands, commands_size);
+    
     return 0;
 
 }
